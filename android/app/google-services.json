@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "551616110234",
+    "firebase_url": "https://taxibaghdad-6890f-default-rtdb.firebaseio.com",
+    "project_id": "taxibaghdad-6890f",
+    "storage_bucket": "taxibaghdad-6890f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:551616110234:android:8aec46635ed594b9844923",
+        "android_client_info": {
+          "package_name": "com.example.taxi_baghdad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "551616110234-ms3t7pnoqapv93q8t0e9h2pp9reglji9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPS7CwwKc_0DAmz1NDpWv82Zleu2hb7eU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "551616110234-ms3t7pnoqapv93q8t0e9h2pp9reglji9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
