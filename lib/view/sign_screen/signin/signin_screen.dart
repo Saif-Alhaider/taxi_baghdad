@@ -28,11 +28,13 @@ class Signin extends StatelessWidget {
                     CustomTextField(
                       placeHolder: "الحساب الالكتروني",
                       textEditingController: _emailController,
+                      svg_path: 'email.svg',
                     ),
                     vertical_space(10.0),
                     CustomTextField(
                       placeHolder: "كلمة السر",
                       textEditingController: _passwordController,
+                      svg_path: 'lock.svg',
                     ),
                   ],
                 ),

@@ -40,6 +40,8 @@ dependencies:
   firebase_auth: ^3.11.2
   firebase_database: ^9.1.7
   google_fonts: ^3.0.1
+  flutter_svg: ^1.1.5
+  lottie: ^1.4.3
 
 dev_dependencies:
   flutter_test:
@@ -66,6 +68,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - Assets/images/
+    - Assets/svg/
+    - Assets/lottie/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -82,10 +86,10 @@ flutter:
   fonts:
     - family: ReadexPro-bold
       fonts:
-        - asset: fonts/ReadexPro-Bold.ttf
+        - asset: Assets/fonts/Readex_Pro/ReadexPro-Bold.ttf
     - family: ReadexPro-Regular
       fonts:
-        - asset: fonts/ReadexPro-Regular.ttf
+        - asset: Assets/fonts/Readex_Pro/ReadexPro-Regular.ttf
         # - asset: fonts/ReadexPro-SemiBold.ttf
         # - asset: fonts/ReadexPro-Medium.ttf
         # - asset: fonts/ReadexPro-Light.ttf
