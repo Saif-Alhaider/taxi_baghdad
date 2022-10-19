@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taxi_baghdad/controller/widgets/space_widget.dart';
+import 'package:taxi_baghdad/view/widgets/space_widget.dart';
 import 'package:taxi_baghdad/themes/main_colors.dart';
 
 import '../../widgets/text_field.dart';
