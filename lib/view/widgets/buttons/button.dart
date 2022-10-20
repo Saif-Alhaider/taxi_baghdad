@@ -6,7 +6,7 @@ import 'package:taxi_baghdad/themes/main_colors.dart';
 class Button extends StatefulWidget {
   final Color buttonColor;
   final String buttonTitle;
-  final Function()? toDo;
+  final Future<Null> Function() toDo;
   const Button({
     Key? key,
     this.buttonColor = MainColors.yellowColor,
@@ -19,7 +19,6 @@ class Button extends StatefulWidget {
 }
 
 class _ButtonState extends State<Button> {
-  
   bool active = false;
   @override
   Widget build(BuildContext context) {
@@ -31,21 +30,28 @@ class _ButtonState extends State<Button> {
       height: 54,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-            shape:  RoundedRectangleBorder(
+            shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),
             ),
             shadowColor: Colors.transparent,
             backgroundColor: widget.buttonColor,
             padding: EdgeInsets.zero),
-        onPressed: widget.toDo,
+        onPressed: () async {
+          setState(() {});
+          active = true;
+          await Future.delayed(Duration(milliseconds:1500 ));
+          await widget.toDo();
+          setState(() {});
+          active = false;
+        },
         child: active
             ? Transform.scale(
-              scale: 1.8,
-              child: LottieBuilder.asset(
-              "Assets/lottie/loading_progress.json",
-              fit: BoxFit.cover,
+                scale: 1.8,
+                child: LottieBuilder.asset(
+                  "Assets/lottie/loading_progress.json",
+                  fit: BoxFit.cover,
                 ),
-            )
+              )
             : Text(
                 widget.buttonTitle,
                 style: const TextStyle(
