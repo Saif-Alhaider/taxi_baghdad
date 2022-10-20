@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
 import 'package:taxi_baghdad/view/widgets/space_widget.dart';
 
-class CreateAccountText extends StatelessWidget {
-  const CreateAccountText({super.key});
+class CreateAccountViaSites extends StatelessWidget {
+  final String firstTitle;
+  final String secondTitle;
+  final String thirdTitle;
+  const CreateAccountViaSites({
+    Key? key,
+    required this.firstTitle,
+    required this.secondTitle,
+    required this.thirdTitle,
+  }) : super(key: key);
   static final List<Map> sitesAuthWidgets = [
     {
       "name": "google",
@@ -25,16 +34,16 @@ class CreateAccountText extends StatelessWidget {
         vertical_space(10),
         Column(
           children: [
-            const Text(
+             Text(
               textAlign: TextAlign.center,
-              "انشاء حساب",
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
+              firstTitle,
+              style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
             ),
             vertical_space(5),
-            const Text(
+             Text(
               textAlign: TextAlign.center,
-              "انشاء حساب بواسطة",
-              style: TextStyle(
+              secondTitle,
+              style: const TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w500,
                   color: Color.fromARGB(119, 0, 0, 0)),
@@ -63,7 +72,16 @@ class CreateAccountText extends StatelessWidget {
               );
             }).toList(),
           ),
-        )
+        ),
+        vertical_space(20),
+         Text(
+                  textAlign: TextAlign.center,
+                  thirdTitle,
+                  style: const TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w500,
+                      color: Color.fromARGB(119, 0, 0, 0)),
+                )
       ],
     );
   }

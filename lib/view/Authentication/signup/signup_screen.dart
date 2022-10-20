@@ -35,17 +35,10 @@ class SignUp extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               // crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CreateAccountText(),
-                // vertical_space(10),
-                Text(
-                  textAlign: TextAlign.center,
-                  "او انشئ حساب عن طريق الايميل",
-                  style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w500,
-                      color: Color.fromARGB(119, 0, 0, 0)),
-                ),
+                const CreateAccountViaSites(firstTitle: "انشاء حساب",secondTitle: "انشاء حساب بواسطة",thirdTitle: "او انشئ حساب عن طريق الايميل"),
                 Column(
+                  children: [
+                    Column(
                   children: [
                     CustomTextField(
                       placeHolder: "اسم المستخدم",
@@ -97,7 +90,7 @@ class SignUp extends StatelessWidget {
                     ),
                   ],
                 ),
-                vertical_space(10),
+                vertical_space(20),
                 Button(
                   buttonTitle: "تسجيل حساب",
                   toDo: () async {
@@ -117,6 +110,8 @@ class SignUp extends StatelessWidget {
                     }
                   },
                   buttonColor: const Color.fromARGB(200, 0, 0, 0),
+                )
+                  ],
                 )
               ],
             ),

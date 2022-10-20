@@ -4,6 +4,7 @@ import 'package:taxi_baghdad/view/widgets/space_widget.dart';
 import 'package:taxi_baghdad/themes/main_colors.dart';
 
 import '../../widgets/text_field.dart';
+import '../signup/create_account_text.dart';
 
 class Signin extends StatelessWidget {
   const Signin({super.key});
@@ -19,9 +20,14 @@ class Signin extends StatelessWidget {
           child: Directionality(
             textDirection: TextDirection.rtl,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                CreateAccountViaSites(
+                  firstTitle: "تسجيل الدخول",
+                  secondTitle: "تسجيل الدخول بواسطة",
+                  thirdTitle: "او تسجيل الدخول عن طريق الايميل",
+                ),
                 Column(
                   children: [
                     CustomTextField(
@@ -41,7 +47,7 @@ class Signin extends StatelessWidget {
                 SizedBox(
                   width: double.maxFinite,
                   height: 55,
-                  child: Button(buttonTitle: "تسجيل الدخول", toDo: (){}),
+                  child: Button(buttonTitle: "تسجيل الدخول", toDo: (){},buttonColor: Color.fromARGB(200, 0, 0, 0),),
                 )
               ],
             ),

@@ -7,33 +7,41 @@ import 'package:taxi_baghdad/view/widgets/space_widget.dart';
 class AuthenticationView extends StatelessWidget {
   AuthenticationView({super.key});
   PageController _pageViewController = PageController();
-  static final List<Widget> pages = [SignUp(), Signin()];
+  static final List<Widget> pages = [
+    Signin(),
+    SignUp(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset:false,
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: SingleChildScrollView(
           // controller: controller,
-          child:Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // vertical_space(MediaQuery.of(context).size.height/6),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.8,
-              child: PageView(physics: NeverScrollableScrollPhysics(),controller: _pageViewController,children: pages),
-            ),
-            DoubleButton(
-              firstButton: (() {
-                
-                _pageViewController.previousPage(duration: Duration(milliseconds: 250), curve: Curves.easeIn);
-              }),
-              secondButton: () {
-                _pageViewController.nextPage(duration: Duration(milliseconds: 250), curve: Curves.easeIn);
-              },
-            )
-          ],
-        ) ,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.8,
+                child: PageView(
+                    physics: NeverScrollableScrollPhysics(),
+                    controller: _pageViewController,
+                    children: pages),
+              ),
+              DoubleButton(
+                firstButton: (() {
+                  _pageViewController.previousPage(
+                      duration: Duration(milliseconds: 250),
+                      curve: Curves.easeIn);
+                }),
+                secondButton: () {
+                  _pageViewController.nextPage(
+                      duration: Duration(milliseconds: 250),
+                      curve: Curves.easeIn);
+                },
+              )
+            ],
+          ),
         ),
       ),
     );
