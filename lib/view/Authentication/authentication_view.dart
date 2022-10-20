@@ -4,10 +4,9 @@ import 'package:taxi_baghdad/view/Authentication/signup/signup_screen.dart';
 import 'package:taxi_baghdad/view/widgets/buttons/double_button.dart';
 
 class AuthenticationView extends StatelessWidget {
-  const AuthenticationView({super.key});
-  static final List<Widget> pages = [
-    SignUp(),Signin()
-  ];
+  AuthenticationView({super.key});
+  PageController _pageViewController = PageController();
+  static final List<Widget> pages = [SignUp(), Signin()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,11 +15,16 @@ class AuthenticationView extends StatelessWidget {
         children: [
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.6,
-            child: PageView.builder(itemCount: pages.length,itemBuilder: (context, index) {
-            return pages[index];
-    },),
+            child: PageView(controller: _pageViewController,children: pages),
           ),
-    DoubleButton()
+          DoubleButton(
+            firstButton: (() {
+              _pageViewController.previousPage(duration: Duration(milliseconds: 150), curve: Curves.easeIn);
+            }),
+            secondButton: () {
+              _pageViewController.nextPage(duration: Duration(milliseconds: 150), curve: Curves.easeIn);
+            },
+          )
         ],
       ),
     );

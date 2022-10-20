@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+
 import 'package:taxi_baghdad/view/widgets/space_widget.dart';
 
 class DoubleButton extends StatefulWidget {
-  const DoubleButton({super.key});
+  const DoubleButton({
+    Key? key,
+    required this.firstButton,
+    required this.secondButton,
+  }) : super(key: key);
+  final Function() firstButton;
+  final Function() secondButton;
 
   @override
   State<DoubleButton> createState() => _DoubleButtonState();
@@ -43,6 +50,7 @@ class _DoubleButtonState extends State<DoubleButton> {
                 child: GestureDetector(
                   onTap: () {
                     active_button = true;
+                    widget.firstButton();
                     setState(() {});
                   },
                   child: Container(
@@ -67,6 +75,7 @@ class _DoubleButtonState extends State<DoubleButton> {
                 child: GestureDetector(
                   onTap: () {
                     active_button = false;
+                    widget.secondButton();
                     setState(() {});
                   },
                   child: Container(
