@@ -25,7 +25,7 @@ class _DoubleButtonState extends State<DoubleButton> {
       child: Stack(
         children: [
           AnimatedContainer(
-            duration: const Duration(milliseconds: 150),
+            duration: const Duration(milliseconds: 250),
             curve: Curves.easeIn,
             height: 100,
             width: 220 / 2,

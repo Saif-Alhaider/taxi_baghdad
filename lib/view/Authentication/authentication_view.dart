@@ -19,10 +19,10 @@ class AuthenticationView extends StatelessWidget {
           ),
           DoubleButton(
             firstButton: (() {
-              _pageViewController.previousPage(duration: Duration(milliseconds: 150), curve: Curves.easeIn);
+              _pageViewController.previousPage(duration: Duration(milliseconds: 250), curve: Curves.easeIn);
             }),
             secondButton: () {
-              _pageViewController.nextPage(duration: Duration(milliseconds: 150), curve: Curves.easeIn);
+              _pageViewController.nextPage(duration: Duration(milliseconds: 250), curve: Curves.easeIn);
             },
           )
         ],
