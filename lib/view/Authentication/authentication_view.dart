@@ -6,10 +6,10 @@ import 'package:taxi_baghdad/view/widgets/space_widget.dart';
 
 class AuthenticationView extends StatelessWidget {
   AuthenticationView({super.key});
-  PageController _pageViewController = PageController();
+  final PageController _pageViewController = PageController();
   static final List<Widget> pages = [
-    Signin(),
-    SignUp(),
+    const SignUp(),
+    const Signin(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -24,19 +24,19 @@ class AuthenticationView extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.8,
                 child: PageView(
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     controller: _pageViewController,
                     children: pages),
               ),
               DoubleButton(
                 firstButton: (() {
                   _pageViewController.previousPage(
-                      duration: Duration(milliseconds: 250),
+                      duration: const Duration(milliseconds: 250),
                       curve: Curves.easeIn);
                 }),
                 secondButton: () {
                   _pageViewController.nextPage(
-                      duration: Duration(milliseconds: 250),
+                      duration: const Duration(milliseconds: 250),
                       curve: Curves.easeIn);
                 },
               )

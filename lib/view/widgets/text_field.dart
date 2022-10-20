@@ -20,8 +20,8 @@ class CustomTextField extends StatelessWidget {
     return Container(
       height: 60,
       decoration: BoxDecoration(
-        color: Color(0xffF5F7F9),
-        borderRadius: BorderRadius.circular(12),
+        color: Color(0xffF8F8FA),
+        borderRadius: BorderRadius.circular(8),
         // border: Border.all(color: Colors.grey)
       ),
       child: Padding(

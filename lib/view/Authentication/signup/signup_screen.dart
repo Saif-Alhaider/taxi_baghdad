@@ -92,7 +92,7 @@ class SignUp extends StatelessWidget {
                 ),
                 vertical_space(20),
                 Button(
-                  buttonTitle: "تسجيل حساب",
+                  buttonTitle: "انشاء حساب",
                   toDo: () async {
                     final FormState? form = _formKey.currentState;
 
