@@ -4,8 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:taxi_baghdad/firebase_options.dart';
 import 'package:taxi_baghdad/themes/MyThemes.dart';
-import 'package:taxi_baghdad/view/sign_screen/signin/signin_screen.dart';
-import 'package:taxi_baghdad/view/sign_screen/signup/signup_screen.dart';
+import 'package:taxi_baghdad/view/Authentication/authentication_view.dart';
 
 // Change to false to use live database instance.
 const USE_DATABASE_EMULATOR = false;
@@ -58,7 +57,7 @@ class _MyAppState extends State<MyApp> {
       themeMode: ThemeMode.system,
       darkTheme: MyThemes.darkTheme, 
       theme: MyThemes.lightTheme, 
-      home: SignUp(),
+      home: AuthenticationView(),
     );
   }
 }

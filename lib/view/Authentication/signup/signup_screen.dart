@@ -3,9 +3,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:taxi_baghdad/controller/Authentication/register.dart';
 
+import '../../widgets/buttons/button.dart';
 import '../../widgets/space_widget.dart';
-import '../../widgets/button.dart';
 import '../../widgets/text_field.dart';
+
+
 
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
@@ -21,9 +23,7 @@ class SignUp extends StatelessWidget {
   static final FirebaseAuth _auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: SizedBox(
+    return SizedBox(
         width: double.maxFinite,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -121,7 +121,6 @@ class SignUp extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 }

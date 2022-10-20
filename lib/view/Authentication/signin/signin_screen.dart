@@ -11,9 +11,7 @@ class Signin extends StatelessWidget {
       TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("signin")),
-      body: SizedBox(
+    return SizedBox(
         width: MediaQuery.of(context).size.width,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -60,7 +58,6 @@ class Signin extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 }
