@@ -1,8 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:taxi_baghdad/view/widgets/buttons/button.dart';
 import 'package:taxi_baghdad/view/widgets/space_widget.dart';
 import 'package:taxi_baghdad/themes/main_colors.dart';
 
+import '../../../controller/Authentication/login.dart';
 import '../../../controller/check_connectivity/check_connectivity.dart';
 import '../../widgets/text_field.dart';
 import '../signup/create_account_text.dart';
@@ -13,6 +15,7 @@ class Signin extends StatelessWidget {
   static final TextEditingController _passwordController =
       TextEditingController();
   static final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  static final FirebaseAuth _auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -68,6 +71,11 @@ class Signin extends StatelessWidget {
                       // connectivity
                       if (await check_connectivity(context)) return;
                       // login
+                      loginUser(
+                          auth: _auth,
+                          context: context,
+                          email: _emailController.text,
+                          password: _passwordController.text);
                     }
                   },
                   buttonColor: Color.fromARGB(200, 0, 0, 0),
