@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taxi_baghdad/view/widgets/buttons/button.dart';
 import 'package:taxi_baghdad/view/widgets/space_widget.dart';
 import 'package:taxi_baghdad/themes/main_colors.dart';
 
@@ -40,19 +41,7 @@ class Signin extends StatelessWidget {
                 SizedBox(
                   width: double.maxFinite,
                   height: 55,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: const StadiumBorder(),
-                      shadowColor: Colors.transparent,
-                      backgroundColor: MainColors.yellowColor,
-                    ),
-                    onPressed: () {},
-                    child: const Text(
-                      "تسجيل الدخول",
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                    ),
-                  ),
+                  child: Button(buttonTitle: "تسجيل الدخول", toDo: (){}),
                 )
               ],
             ),

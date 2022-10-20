@@ -2,6 +2,7 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:taxi_baghdad/controller/Authentication/register.dart';
+import 'package:taxi_baghdad/view/Authentication/signup/create_account_text.dart';
 
 import '../../../controller/check_connectivity/check_connectivity.dart';
 import '../../widgets/buttons/button.dart';
@@ -31,8 +32,19 @@ class SignUp extends StatelessWidget {
           child: Form(
             key: _formKey,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              // crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                CreateAccountText(),
+                // vertical_space(10),
+                Text(
+                  textAlign: TextAlign.center,
+                  "او انشئ حساب عن طريق الايميل",
+                  style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w500,
+                      color: Color.fromARGB(119, 0, 0, 0)),
+                ),
                 Column(
                   children: [
                     CustomTextField(

@@ -40,7 +40,7 @@ class _DoubleButtonState extends State<DoubleButton> {
                   : const BorderRadius.only(
                       topRight: Radius.circular(12),
                       bottomRight: Radius.circular(12)),
-              color: const Color.fromARGB(255, 230, 224, 248),
+              color: const Color(0xffF8F8FA),
             ),
           ),
           Row(
@@ -58,7 +58,7 @@ class _DoubleButtonState extends State<DoubleButton> {
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(12),
                           bottomLeft: Radius.circular(12)),
-                      color: Color(0x8EE6E0F8),
+                      color: Colors.transparent,
                     ),
                     height: double.maxFinite,
                     child: const Center(
@@ -83,7 +83,7 @@ class _DoubleButtonState extends State<DoubleButton> {
                       borderRadius: BorderRadius.only(
                           topRight: Radius.circular(12),
                           bottomRight: Radius.circular(12)),
-                      color: Color(0x8EE6E0F8),
+                      color: Colors.transparent,
                     ),
                     height: double.maxFinite,
                     child: const Center(
