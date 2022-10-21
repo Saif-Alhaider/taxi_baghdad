@@ -20,26 +20,20 @@ class Home extends StatelessWidget {
         title: Text("main screen"),
       ),
       body: Stack(children: [
-        Column(
-          children: [
-            Expanded(
-              child: GoogleMap(
-                mapType: MapType.normal,
-                myLocationButtonEnabled: true,
-                initialCameraPosition: kGooglePlex,
-                onMapCreated: (GoogleMapController controller) {
-                  _controller.complete(controller);
-                  mapController = controller;
-                },
-              ),
+        GoogleMap(
+              mapType: MapType.normal,
+              myLocationButtonEnabled: true,
+              initialCameraPosition: kGooglePlex,
+              onMapCreated: (GoogleMapController controller) {
+                _controller.complete(controller);
+                mapController = controller;
+              },
             ),
             Positioned(
               left: 0,
               right: 0,
               bottom: 0,
                 child: Dashboard()),
-          ],
-        )
       ]),
     );
   }
