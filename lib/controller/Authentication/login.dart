@@ -15,7 +15,6 @@ void loginUser({
         .showSnackBar(SnackBar(content: Text(err.message!)));
   }))
       .user;
-
   if (user != null) {
     // check if user has info in db
     DatabaseReference userRef = FirebaseDatabase.instance.ref().child('users/${user.uid}');
