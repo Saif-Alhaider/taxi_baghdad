@@ -5,6 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:taxi_baghdad/firebase_options.dart';
 import 'package:taxi_baghdad/themes/MyThemes.dart';
 import 'package:taxi_baghdad/view/Authentication/authentication_view.dart';
+import 'package:taxi_baghdad/view/Home/home_main.dart';
 
 // Change to false to use live database instance.
 const USE_DATABASE_EMULATOR = false;
@@ -28,10 +29,7 @@ Future<void> main() async {
   }
 
   runApp(
-    const MaterialApp(
-      title: 'Flutter Database Example',
-      home: MyApp(),
-    ),
+    const MyApp(),
   );
 }
 
@@ -54,10 +52,11 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       darkTheme: MyThemes.darkTheme, 
       theme: MyThemes.lightTheme, 
-      home: AuthenticationView(),
+      home: Home(),
     );
   }
 }

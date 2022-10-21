@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:taxi_baghdad/themes/main_colors.dart';
 
 import 'package:taxi_baghdad/view/widgets/space_widget.dart';
 
@@ -62,7 +63,7 @@ class CreateAccountViaSites extends StatelessWidget {
                 child: Container(
                   margin: EdgeInsets.only(right: 2.5,left: 2.5),
                   decoration: BoxDecoration(
-                  color: Color(0xffF8F8FA),
+                  color: MainColors.ghostseeker,
                   borderRadius: BorderRadius.circular(8),
                   ),
                   child: Center(
