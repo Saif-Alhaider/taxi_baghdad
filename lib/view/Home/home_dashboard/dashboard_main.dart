@@ -9,13 +9,21 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(top: 8,left: 8,right: 8),
+      padding: const EdgeInsets.only(top: 8, left: 8, right: 8),
       decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
-            topRight: Radius.circular(18),
-            topLeft: Radius.circular(18),
-          )),
+        color: Colors.white,
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(18),
+          topLeft: Radius.circular(18),
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: Color.fromARGB(80, 0, 0, 0),
+            blurRadius: 20,
+            spreadRadius: 5,
+          )
+        ],
+      ),
       height: 260,
       width: MediaQuery.of(context).size.width,
       child: Directionality(

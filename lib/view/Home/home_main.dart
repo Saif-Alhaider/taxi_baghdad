@@ -16,9 +16,9 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("main screen"),
-      ),
+      // appBar: AppBar(
+      //   title: Text("main screen"),
+      // ),
       body: Stack(children: [
         GoogleMap(
               mapType: MapType.normal,
@@ -29,7 +29,7 @@ class Home extends StatelessWidget {
                 mapController = controller;
               },
             ),
-            Positioned(
+            const Positioned(
               left: 0,
               right: 0,
               bottom: 0,
