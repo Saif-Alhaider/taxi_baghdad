@@ -1,16 +1,8 @@
 # taxi_baghdad
 
-A new Flutter project.
+A new pickup app that can pick you anywhere in baghdad.
 
-## Getting Started
+## the apility to signup in multiple social networks
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_1666969144](https://user-images.githubusercontent.com/58166633/198665625-10bf2f32-6314-4e52-be8c-fa402021fe18.png)
+![Screenshot_1666969149](https://user-images.githubusercontent.com/58166633/198665660-2b169623-bc29-43ab-a65d-6baefef9647b.png)
