@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:taxi_baghdad/controller/Network/requestHelper.dart';
 import 'package:taxi_baghdad/view/Home/home_dashboard/dashboard_main.dart';
 import 'package:taxi_baghdad/view/widgets/custom_text.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -30,6 +31,8 @@ class Home extends StatelessWidget {
 
       LatLng mapPos = LatLng(position.latitude, position.longitude);
       print("latitude:${position.latitude}\nlongitude:${position.longitude}");
+      String locationAdress = await LocationCalls.reverseGeocode(position);
+      print("the adress is $locationAdress");
       CameraPosition cameraPosition = CameraPosition(target: mapPos, zoom: 14);
 
       mapController!
@@ -84,7 +87,6 @@ class Home extends StatelessWidget {
           onMapCreated: (GoogleMapController controller) {
             _controller.complete(controller);
             mapController = controller;
-            print("location");
             getUserPosition().then((value) => print("location => $value"));
           },
         ),

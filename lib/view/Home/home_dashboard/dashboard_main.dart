@@ -43,7 +43,8 @@ class Dashboard extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
             vertical_space(20),
-            SearchBar()
+            SearchBar(),
+            
           ],
         ),
       ),
